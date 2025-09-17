@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>More about me</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* --- NAV --- */
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 10px;
+      padding: 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #60a5fa;
+    }
+
+    /* --- HEADER --- */
+    .header {
+      background: linear-gradient(to right, #1e293b, #3b82f6);
+      color: white;
+      text-align: center;
+      padding: 3rem 1rem;
+      font-family: 'Franklin Gothic Medium', sans-serif;
+    }
+
+    .header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 1rem;
+      font-family: 'Arial Narrow', sans-serif;
+      margin-top: 0.25rem;
+      color: #e0e7ff;
+    }
+
+    /* --- SECCIONES --- */
+    section {
+      max-width: 900px;
+      margin: 4rem auto;
+      padding: 2rem;
+      background: #f8fafc;
+      border-radius: 1rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+
+    section h1, section h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #1e293b;
+      border-bottom: 3px solid #3b82f6;
+      display: inline-block;
+      padding-bottom: 0.25rem;
+    }
+
+    section p {
+      line-height: 1.8;
+      color: #334155;
+      font-size: 25px;
+    }
+
+    /* --- FRASES --- */
+    blockquote {
+      font-style: italic;
+      margin: 1rem 0;
+      padding-left: 1rem;
+      border-left: 4px solid #3b82f6;
+      color: #475569;
+      background: #f1f5f9;
+      border-radius: 0.5rem;
+      padding: 0.5rem 1rem;
+    }
+
+    /* --- CONTACTO --- */
+    #contact {
+      text-align: center;
+    }
+
+    .p_h {
+      font-family: 'Courier New', monospace;
+      font-size: 0.9rem;
+      color: #1e293b;
+    }
+
+    /* --- POLAROID CARD --- */
+    .polaroid {
+      width: 220px;
+      padding: 10px 10px 20px 10px;
+      background: #fff;
+      border-radius: 0.75rem;
+      box-shadow:
+        0 1px 2px rgba(0, 0, 0, 0.12),
+        0 2px 4px rgba(0, 0, 0, 0.12),
+        0 4px 6px rgba(0, 0, 0, 0.12);
+      transform: rotate(-2deg);
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+
+    .polaroid:hover {
+      transform: rotate(0deg) scale(1.05);
+      box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.15),
+        0 4px 8px rgba(0, 0, 0, 0.15),
+        0 8px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .polaroid img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-bottom: 5px solid #eee;
+      border-radius: 0.5rem;
+    }
+
+    .caption {
+      font-family: "Courier New", monospace;
+      margin-top: 12px;
+      color: #333;
+      font-size: 14px;
+      opacity: 0.9;
+    }
+    @media (min-width: 1600px) {
+         section {
+         padding: 60px 100px;
+        }
+    }
+
+  </style>
+</head>
+<body class="bg-gray-50">
+  <header class="header">
+    <h1>¿Quien es Tapia realmente?</h1>
+    <nav>
+      <ul>
+        <li><a href="/Index.html">Inicio</a></li>
+        <li><a href="#best-friends">Mis mejores amigos</a></li>
+        <li><a href="#mi_family">Familia</a></li>
+        <li><a href="#Mis-pasatimepos">Mi definicion</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+        <h1>¿Quien Soy?</h1>
+      <p>
+        Ahora te contaré quien soy realmente, que es lo que pienso en diferentes circunstancias, que tipo de persona soy. 
+        Algunas cosas de las cuales no soy capaz de decir siempre, o esas fotos que solo dejo que las vean un momento, 
+        todas las coasas que pueden ser efimeras, pero ahora las dejare plasmadas aqui para que siempre puedan ser vistas y recordadas.
+      </p>
+    </section>
+
+    <section id="best-friends" class="grid gap-6">
+      <h2>Mis mejores amigos</h2>
+      <p>
+        En la vida he tenido muchas amistades, algunas efimeras, otras permanentes. Tambien he tenido amistades malas,pero siempre prefiero quedarme con lo bueno que dejaron esas amistades efimeras, malas o solo conocidos, 
+        porque algo que me ha enseñado esta vida es valorar cada momento que tienes con una persona y que esa persona siempre te deja aprendizajes. 
+        Pero las personas que siempre llevo conmigo en mi dia a dia, en mis pensamientos y en mi corazon son las que te mostrare a continuacion.
+      </p>
+
+      <!-- Grid de Polaroid Cards -->
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 justify-items-center mt-8">
+        <div class="polaroid">
+          <img src="/photos/uriel.jpg" alt="Amigo 1">
+          <div class="caption">Uriel: Mi hermano y ahijado</div>
+        </div>
+
+        <div class="polaroid">
+          <img src="/photos/sofi.jpg" alt="Amigo 2">
+          <div class="caption">Sofi: Negro de 2 metros</div>
+        </div>
+
+        <div class="polaroid">
+          <img src="/photos/david3.jpg" alt="Amigo 3">
+          <div class="caption">David: El menos tibio</div>
+        </div>
+
+        <div class="polaroid">
+          <img src="/photos/javi.jpg" alt="Amigo 4">
+          <div class="caption">Javi: El mas guapo y el que chambea de todo</div>
+        </div>
+
+        <div class="polaroid">
+          <img src="/photos/lubu.jpg" alt="Amigo 5">
+          <div class="caption">Lubu: Real de la universidad</div>
+        </div>
+
+        <div class="polaroid">
+          <img src="/photos/diego.jpg" alt="Amigo 6">
+          <div class="caption">Diego: El que trae la camisa bien puesta</div>
+        </div>
+
+        <div class="polaroid">
+          <img src="/photos/diegof.jpg" alt="Amigo 7">
+          <div class="caption">Diego: El Egolifter</div>
+        </div>
+
+        <div class="polaroid">
+          <img src="/photos/saul.jpg" alt="Amigo 8">
+          <div class="caption">Saul: El Teton</div>
+        </div>
+
+        <div class="polaroid">
+          <img src="/photos/Sina.jpg" alt="Amigo 9">
+          <div class="caption">Sinay: La morena</div>
+        </div>
+
+        <div class="polaroid">
+          <img src="/photos/gabo.jpg" alt="Amigo 10">
+          <div class="caption">Gabo: El si a todo</div>
+        </div>
+
+        <div class="polaroid">
+          <img src="/photos/rodri.jpg">
+          <div class="caption">Rodrigo: El suggar</div>
+        </div>
+
+        <div class="polaroid">
+          <img src="/photos/friendss.jpg">
+          <div class="caption">Emyr y Yara: Los fuga a pistear</div>
+        </div>
+      </div>
+
+      <p>
+        Estos son algunos de ellos, no son todos los que considero intimos pero no con todos tengo fotos, ya sea de ellos o con ellos. Aqui es donde pienso lo importante del tiempo, las acciones, deberiamos de pensar mas en si volveremos a ver a esas personas, cuando volveremos a cruzar una minima interaccion. Por eso considero lo importante que es el disfrutar y apreciar el mas minimo momento que pasas con tus seres queridos, asi que te recomiendo que nunca menosprecies el mas minimo tiempo que pasas con esas personas que quieres.
+      </p>
+    </section>
+
+    <section id="mi_family">
+      <h1>Mi familia</h1>
+      <p>
+        Mi familia es una de las cosas mas indispensables para mi, aunque sea pequeña, la valoro y quiero. Aqui te muestro quien es mi familia
+      </p>
+
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 justify-items-center mt-8">
+        <div class="polaroid">
+          <img src="/photos/sis.jpg" alt="Hermana">
+          <div class="caption">Ana: Mi Hermana</div>
+        </div>
+        <div class="polaroid">
+          <img src="/photos/mama.jpg" alt="Mamá">
+          <div class="caption">Raquel: Mi Mamá</div>
+        </div>
+        <div class="polaroid">
+          <img src="/photos/Abue.jpg" alt="Abuela">
+          <div class="caption">Anita: Mi abuela</div>
+        </div>
+        <div class="polaroid">
+          <img src="/photos/mi familia.jpg" alt="Abuela">
+          <div class="caption">Mi mundo entero</div>
+        </div>
+      </div>
+
+      <p>
+        Aqui tambien pienso lo efimro que pueden ser los momentos con ellos, aunque uno crea que la familia estar para siempre, no es asi, muchas veces subestimamos el factor del tiempo. Ese factor que es muy dificil de burlar, porque aunque nuestros padres, hermanos y abuelos quieran estar con nosotos, no toda la vida sera asi. por eso a mi manera les demuestro lo mucho que las quiero, lo agradecido que estoy con ellas por todo lo que han hecho por mi.
+      </p>
+    </section>
+
+    <section id="Mis-pasatimepos">
+      <h1>Cosas que me representan</h1>
+      <p>
+        En esta parte de mi vida, te mostrare mis Hobbies, todo lo que me gusta hacer en el tiempo libre, solo son algunas coas, no todas pero si las mas importantes, estas son las cosas que me definen, son las cosas con las cuales puedo decir "Esto es Tapia"
+      </p>
+
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="polaroid"><img src="/photos/gym2.jpg"></div>
+        <div class="polaroid"><img src="/photos/books.jpg"></div>
+        <div class="polaroid"><img src="/photos/collage.jpg"></div>
+        <div class="polaroid"><img src="/photos/papa.jpg"></div>
+        <div class="polaroid"><img src="/photos/littleboy.jpg"></div>
+        <div class="polaroid"><img src="/photos/pedo.jpg"></div>
+      </div>
+
+      <p>
+        Estas son algunas de las cosas con las cuales puedo decir "Este soy yo" esas cosas que me caracterizan como: el ir al gym, jugar videojuegos, el amor por mi papá, lo pedote que soy, el tipo de musica que esucho y los tipos de libros que me gusta leer. Son demasiadas cosas las que me definen que no puedo poner todas pero si poner algunas de las que mas me representan
+      </p>
+    </section>
+
+    <section >
+      <h1>Un ultimo vistazo a mi mundo</h1>
+      <p>
+        Gracias por llegar hasta aquí y conocer un poco más de mí. Este blog es solo una pequeña ventana a mis pasiones y aprendizajes, y me alegra compartirlo contigo. Nos vemos pronto, con nuevas ideas y momentos para seguir creciendo
+      </p>
+    </section>
+  </main>
+</body>
+</html>
